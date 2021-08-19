@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,7 +22,7 @@ public class Livro implements Serializable {
 	private String nome_autor;
 	private String texto;
 	
-	@ManyToMany
+	@ManyToOne
 	@JoinColumn(name="categoria_id")
 	private Categoria categoria;
 	
